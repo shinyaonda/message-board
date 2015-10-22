@@ -18,6 +18,19 @@
 <div class="panel panel-primary",>
  <div style="padding:20px; margin-left:30px">
 <%= form_for(Message.new) do |f| %>
+ <% if @message.errors.present? %>
+  <div class="alert alert-danger">
+   <%= alert %>
+   <ul>
+     <% @message.errors.full_messages.each do |full_message| %>
+      <li>
+       <%= full_message %>
+      </li>
+     <% end %>
+    </ul>
+   </div>
+  <% end %>
+  
  name:<br>
  <%= f.text_field :name %>
  <br>
