@@ -1,6 +1,8 @@
-<div class="panel panel-default">
+<br>
+<section>
+<div class="panel panel-primary">
  <div class="panel-heading">
-   メッセージ一覧
+   Messages
  </div>
  
  <div class="panel-body">
@@ -9,14 +11,21 @@
    <%= message.body %>
     <br>
    <% end %>
-  </div>
+   </div>
  </div> 
-
-<%= form_for(Message.new) do |f| %>
- 名前:
- <%= f.text_field :name %>
  
- 内容:
- <%= f.text_field :body %>
- <%= f.submit %>
+
+<div class="panel panel-primary",>
+ <div style="padding:20px; margin-left:30px">
+<%= form_for(Message.new) do |f| %>
+ name:<br>
+ <%= f.text_field :name %>
+ <br>
+ <br>
+ message:<br>
+ <%= f.text_area :body, :size=>"35x4"%><br><br>
+ <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %> 
+</div>
+</div>
+</section>

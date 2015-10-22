@@ -2,19 +2,17 @@
 <html>
 <head>
   <title>MessageBoard</title>
+　<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 </head>
+<Br>
 <body>
-  <nav class="navbar">
     <div class="container">
-      <div class"navbar-header">
-        <a class="navbar-brand" href="#">Message Board</a>
-      </div>
+        <a href="#"><%=image_tag("message_board_top.png",size:"240x128") %></a>
     </div>
-  </nav>  
   <div class="container">
    <%= yield %>
   </div>
