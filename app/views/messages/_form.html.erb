@@ -1,6 +1,6 @@
  <div class="panel panel-primary",>
  <div style="padding:20px; margin-left:30px">
-<%= form_for(Message.new) do |f| %>
+<%= form_for(@message) do |f| %>
  <% if @message.errors.present? %>
   <div class="alert alert-danger">
    <%= alert %>
