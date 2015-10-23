@@ -14,6 +14,12 @@
         <a href="#"><%=image_tag("message_board_top.png",size:"240x128") %></a>
     </div>
   <div class="container">
+      <% if notice %>
+       <div class="alert alert-info">
+           <%= notice %>
+      </div>
+     <% end %>
+     
    <%= yield %>
   </div>
 </body>
